@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net8.0</TargetFrameworks>
+    <PackageId>RapidApi.VatValidatorClient</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Noor Mkdad</Authors>
+    <Company>Noor Mkdad</Company>
+    <Description>Official zero-dependency C# / .NET client for EU &amp; UK VAT Validator &amp; Rate Engine</Description>
+    <PackageProjectUrl>https://noormkdad.com/tools/vat-validator</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/DrMkdaddy/vat-validator-csharp</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EnableSourceLink>false</EnableSourceLink>
+    <EmbedUntrackedSources>false</EmbedUntrackedSources>
+    <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+    <Deterministic>true</Deterministic>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageTags>vat;vies;eu-vat;uk-vat;tax-rate;moss-oss;invoicing;cross-border-tax;vat-number</PackageTags>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.0'">
+    <PackageReference Include="System.Text.Json" Version="8.0.5" />
+  </ItemGroup>
+</Project>
